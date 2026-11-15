@@ -9,34 +9,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
 </head>
 <body class="form">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="FORM — главная">FORM<span>®</span></a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="services.html" aria-current="page">Услуги</a><a href="studio.html">Барбершоп</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="FORM — главная">FORM<span>®</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2">Главная</a><a href="services.html" aria-current="page">Услуги</a><a href="studio.html">Барбершоп</a></nav>
     <a class="button header-action" href="booking.html">Записаться <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell" id="main">
-    <div class="page-head"><h1>Услуги и цены</h1><p>Выбери услугу, чтобы посмотреть цену и перейти к записи.</p></div>
-    <div class="choices" role="group" aria-label="Услуги и цены" data-picker><button type="button" aria-controls="haircut" aria-pressed="true">Стрижка</button><button type="button" aria-controls="beard" aria-pressed="false">Борода</button><button type="button" aria-controls="full" aria-pressed="false">Комплекс</button><button type="button" aria-controls="clipper" aria-pressed="false">Машинка</button></div>
-    <article class="detail" id="haircut">
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер за работой" decoding="async"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Мужская стрижка</h2><div class="info-line"><span>60 минут</span><span>55 BYN</span></div><p>Обсудим привычную укладку, подберём форму. В услугу входят мытьё, стрижка и укладка.</p><a class="button" href="booking.html?choice=%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D1%81%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0">Выбрать время <span aria-hidden="true">→</span></a></div>
-    </article>
-    <article class="detail" id="beard" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер подравнивает бороду" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Борода и контур</h2><div class="info-line"><span>30 минут</span><span>35 BYN</span></div><p>Подберём длину, оформим линию шеи и щёк, покажем, как ухаживать за бородой дома.</p><a class="button" href="booking.html?choice=%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B0+%D0%B8+%D0%BA%D0%BE%D0%BD%D1%82%D1%83%D1%80">Выбрать время <span aria-hidden="true">→</span></a></div>
-    </article>
-    <article class="detail" id="full" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Крупный план стрижки" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Полный образ</h2><div class="info-line"><span>90 минут</span><span>80 BYN</span></div><p>Совместим стрижку и оформление бороды, чтобы силуэт смотрелся цельно.</p><a class="button" href="booking.html?choice=%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9+%D0%BE%D0%B1%D1%80%D0%B0%D0%B7">Выбрать время <span aria-hidden="true">→</span></a></div>
-    </article>
-    <article class="detail" id="clipper" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер за работой" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Стрижка машинкой</h2><div class="info-line"><span>30 минут</span><span>30 BYN</span></div><p>Чистая геометрия и минимум укладки. Выберем длину и оформим контуры.</p><a class="button" href="booking.html?choice=%D0%A1%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0+%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BA%D0%BE%D0%B9">Выбрать время <span aria-hidden="true">→</span></a></div>
-    </article>
+<div class="page-head"><h1>Услуги и цены</h1><p>Стрижка, борода и укладка.</p></div>
+        <div class="chair-services">
+          <figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер за работой" fetchpriority="high"></figure>
+          <div>
+        <details data-service id="haircut" open>
+          <summary>Мужская стрижка</summary>
+          <div class="chair-service-info"><div class="info-line"><span>60 минут</span><span>55 BYN</span></div><p>Обсудим привычную укладку, подберём форму. В услугу входят мытьё, стрижка и укладка.</p><a class="button" href="booking.html?choice=%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D1%81%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0">Выбрать время <span aria-hidden="true">→</span></a></div>
+        </details>
+        <details data-service id="beard">
+          <summary>Борода и контур</summary>
+          <div class="chair-service-info"><div class="info-line"><span>30 минут</span><span>35 BYN</span></div><p>Подберём длину, оформим линию шеи и щёк, покажем, как ухаживать за бородой дома.</p><a class="button" href="booking.html?choice=%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B0+%D0%B8+%D0%BA%D0%BE%D0%BD%D1%82%D1%83%D1%80">Выбрать время <span aria-hidden="true">→</span></a></div>
+        </details>
+        <details data-service id="full">
+          <summary>Полный образ</summary>
+          <div class="chair-service-info"><div class="info-line"><span>90 минут</span><span>80 BYN</span></div><p>Совместим стрижку и оформление бороды, чтобы силуэт смотрелся цельно.</p><a class="button" href="booking.html?choice=%D0%9F%D0%BE%D0%BB%D0%BD%D1%8B%D0%B9+%D0%BE%D0%B1%D1%80%D0%B0%D0%B7">Выбрать время <span aria-hidden="true">→</span></a></div>
+        </details>
+        <details data-service id="clipper">
+          <summary>Стрижка машинкой</summary>
+          <div class="chair-service-info"><div class="info-line"><span>30 минут</span><span>30 BYN</span></div><p>Чистая геометрия и минимум укладки. Выберем длину и оформим контуры.</p><a class="button" href="booking.html?choice=%D0%A1%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0+%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%BA%D0%BE%D0%B9">Выбрать время <span aria-hidden="true">→</span></a></div>
+        </details>
+          </div>
+        </div>
   </main>
   <footer class="site-footer shell">
     <a href="../../#work">← Все проекты</a>

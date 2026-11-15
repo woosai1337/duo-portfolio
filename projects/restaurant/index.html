@@ -9,45 +9,47 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
-  <link rel="stylesheet" href="../editorial-v1.css">
-  <script type="module" src="../objects-v1.js"></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
+  <script type="module" src="../objects-v2.js"></script>
 </head>
 <body class="atelier" data-legacy-links="{&quot;about&quot;: &quot;space.html&quot;, &quot;menu&quot;: &quot;menu.html&quot;, &quot;space&quot;: &quot;space.html&quot;}">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="ATELIER — главная">ATELIER</a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html" aria-current="page">Главная</a><a href="menu.html">Меню</a><a href="space.html">Зал</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="ATELIER — главная">ATELIER</a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2" aria-current="page">Главная</a><a href="menu.html">Меню</a><a href="space.html">Зал</a></nav>
     <a class="button header-action" href="booking.html">Забронировать <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell home" id="main">
-    <section class="home-cover">
-      <div class="home-copy">
+    <section class="dinner">
+      <div class="dinner-photo"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Подача блюда за накрытым столом" fetchpriority="high"></div>
+      <div class="dinner-card">
         <p class="kicker">Ресторан сезонной кухни</p>
-        <h1>У вечера есть<em>свой вкус.</em></h1>
-        <p>Сезонная кухня, вино по бокалам и столы, за которыми хочется задержаться.</p>
-        <div class="home-actions">
-          <a class="button" href="menu.html">Открыть меню <span aria-hidden="true">→</span></a>
-          
-        </div>
+        <h1>У вечера есть<br><em>свой вкус.</em></h1>
+        <p>Вино по бокалам и столы, за которыми хочется задержаться.</p>
+        <a class="button" href="menu.html">Открыть меню <span aria-hidden="true">→</span></a>
       </div>
-      <figure class="hero-media"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Подача блюда за накрытым столом" fetchpriority="high"></figure>
-      
     </section>
-    <a class="edition-jump" href="#edition">Из меню ATELIER <span aria-hidden="true">↓</span></a>
-    <section class="edition" id="edition" aria-labelledby="edition-title">
-      <figure class="object-window">
-        <img class="object-poster" src="../objects/atelier.png" alt="Паста с креветками" loading="lazy">
-        <canvas data-object="atelier" aria-hidden="true" hidden></canvas>
-        <figcaption>Паста с креветками</figcaption>
-        <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
-      </figure>
-      <div class="edition-copy">
-        <h2 id="edition-title">К ужину — свежая паста.</h2>
-        <p>Креветки, томаты, чеснок и свежие травы. Подаём горячей, чтобы соус обволакивал каждую ленту.</p>
-        
-        <div class="edition-links"><a href="menu.html#mains">Основное меню <span aria-hidden="true">→</span></a><a href="space.html">Выбрать столик <span aria-hidden="true">→</span></a></div>
+    <section class="dinner-menu" id="edition">
+      <div class="dinner-special">
+        <h2>Из меню</h2>
+        <div class="dinner-dishes">
+          <article><h3>Томаты со страчателлой</h3><strong>24 BYN</strong><p>Базилик, оливковое масло, тёплый хлеб.</p></article>
+          <article><h3>Паста с креветками</h3><strong>38 BYN</strong><p>Томатный соус, чеснок, свежие травы.</p></article>
+          <article><h3>Стейк с огня</h3><strong>56 BYN</strong><p>Печёные овощи, соус из трав.</p></article>
+        </div>
+        <details class="plating">
+          <summary>Посмотреть подачу пасты в 3D</summary>
+          <figure class="object-window ">
+      <img class="object-poster" src="../objects/atelier.png" alt="Паста с креветками" loading="lazy">
+      <canvas data-object="atelier" aria-hidden="true" hidden></canvas>
+      <figcaption>Паста с креветками</figcaption>
+      <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
+    </figure>
+        </details>
+        <a class="dinner-full-link" href="menu.html">Полное меню <span aria-hidden="true">→</span></a>
       </div>
+      <figure class="dinner-room"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Столики ресторанного зала" loading="lazy"><figcaption><a href="space.html">Заглянуть в зал <span aria-hidden="true">→</span></a></figcaption></figure>
     </section>
   </main>
   <footer class="site-footer shell">

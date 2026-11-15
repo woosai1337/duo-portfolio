@@ -1,0 +1,292 @@
+/* Artwork sits alongside four independent home layouts. */
+.home { margin-top: 0; padding-bottom: clamp(26px,5vw,68px) }
+html:has(.home) { scroll-behavior: smooth }
+#edition { scroll-margin-top: 16px }
+.object-window { position: relative; margin: 0; isolation: isolate; min-height: 290px }
+.object-window canvas,.object-poster { position: absolute; inset: 0; width: 100%; height: 100% }
+.object-poster { object-fit: contain }
+.object-window canvas { cursor: grab; touch-action: pan-y }
+.object-window canvas:active { cursor: grabbing }
+.object-window figcaption {
+  position: absolute; bottom: 16px; left: 18px; font-size: 11px; pointer-events: none;
+}
+.orbit-button {
+  position: absolute; bottom: 12px; right: 15px; min-height: 44px; padding: 6px 12px;
+  border: 1px solid currentColor; font-size: 12px; background: var(--base); color: var(--ink);
+}
+.orbit-button:hover { filter: brightness(1.17) }
+
+/* FORM — a print poster, followed by the price board. */
+.form .site-header { grid-template-columns: auto 1fr auto }
+.form .site-nav { justify-content: end; padding-inline-end: 20px }
+.form .site-nav a { text-transform: uppercase; font-size: 12px; letter-spacing: .07em }
+.form-poster {
+  position: relative; display: grid; isolation: isolate; background: #d4ff43; color: #191b12;
+  min-height: clamp(420px,67svh,690px); overflow: hidden;
+}
+.form-poster::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; opacity: .25;
+  background: repeating-linear-gradient(-35deg,transparent 0 58px,#6f8a23 58px 59px);
+  mask-image: linear-gradient(90deg,transparent 25%,#000);
+}
+.form-poster-copy {
+  align-self: center; z-index: 2; pointer-events: none;
+  padding: clamp(28px,6vw,95px); padding-right: 0;
+}
+.form-poster-copy .kicker { color: #363d19; border-left: 4px solid currentColor; padding-left: 10px }
+.form-poster h1 {
+  font: 700 clamp(57px,9.1vw,160px)/.91 Oswald,sans-serif;
+  letter-spacing: -.055em; text-transform: uppercase; margin: 19px 0 23px;
+  max-width: 67%;
+}
+.form-poster h1 em { display: block; font-style: normal }
+.form-poster-copy > p:not(.kicker) { max-width: 29ch }
+.form-index-link {
+  font-size: 13px; display: inline-flex; align-items: center; gap: 32px;
+  background: #171a13; color: #f2f4e8; padding: 12px 16px; margin-top: 23px; pointer-events: auto;
+}
+.form-index-link:hover { background: #3b451b }
+.form-poster .object-window { position: absolute; inset: -4% -2% 0 39% }
+.form-poster .object-window figcaption { left: auto; right: 24px; top: 26px; bottom: auto; font-weight: 800 }
+.form-poster .orbit-button { right: 24px; bottom: 24px; border-color: #171a13; background: #d4ff43; color: #191b12 }
+.form-quick { display: grid; grid-template-columns: .67fr 1.33fr; margin-top: 25px; border-block: 1px solid var(--rule) }
+.form-quick figure { min-height: 300px; overflow: hidden }
+.form-quick img { filter: grayscale(.9); object-position: 58% 49% }
+.form-price { padding: clamp(20px,4vw,58px) }
+.form-price h2 { text-transform: uppercase; font: 700 clamp(33px,5vw,68px)/1 Oswald; margin-bottom: 16px }
+.price-board { margin-bottom: 22px }
+.price-board a { display: grid; grid-template-columns: 1fr auto auto 20px; gap: clamp(12px,2.5vw,35px); align-items: center; min-height: 48px; border-top: 1px solid var(--rule) }
+.price-board a:last-child { border-bottom: 1px solid var(--rule) }
+.price-board a:hover,.price-board i { color: var(--accent) }
+.price-board a span { font: 600 12px Manrope; white-space: nowrap }
+.price-board i { font-style: normal }
+
+/* MUSE — portrait led cover and a table for trying colors. */
+.muse .shell { width: min(100% - 84px,1270px) }
+.muse .site-header { grid-template-columns: 1fr 1fr 1fr; gap: 12px }
+.muse .site-header .logo { justify-self: center; grid-column: 2; grid-row: 1 }
+.muse .site-nav { grid-column: 1; grid-row: 1; gap: 19px }
+.muse .header-action { grid-column: 3; grid-row: 1 }
+.muse-cover {
+  display: grid; grid-template-columns: .7fr 1fr .47fr; grid-template-rows: 1fr auto;
+  min-height: clamp(445px,70svh,745px); isolation: isolate; position: relative; align-items: center;
+}
+.muse-cover h1 {
+  font: 400 clamp(54px,7.5vw,110px)/1.05 Prata,Georgia,serif; letter-spacing: -.09em;
+  grid-column: 1/3; grid-row: 1; z-index: 2; max-width: 8.25ch; padding-left: 2%;
+}
+.muse-cover h1 em { color: #902f50; font-family: Georgia,serif; font-weight: 400 }
+.muse-cover-photo {
+  grid-column: 2; grid-row: 1/3; align-self: stretch; z-index: -1;
+  overflow: hidden; border-radius: 48% 48% 0 0 / 36% 36% 0 0; background: #c99a8e;
+}
+.muse-cover-photo img { object-position: 55% 33%; animation: frame-in .85s both }
+.muse-cover-copy { grid-column: 3; grid-row: 1; align-self: end; padding: 0 0 6vh 18%; font-size: 14px; color: var(--muted) }
+.muse-cover-copy a,.muse-down { display: inline-flex; gap: 14px; align-items: center; color: var(--ink); border-bottom: 1px solid var(--rule); padding: 8px 0; font-size: 13px; font-weight: 800 }
+.muse-cover-copy a { margin-top: 15px }
+.muse-down { grid-column: 1; grid-row: 2; justify-self: start; align-self: end }
+.muse-counter {
+  display: grid; grid-template-columns: 1.15fr .85fr; grid-template-rows: auto 1fr;
+  background: #edd4c6; margin-top: clamp(23px,5vw,60px); padding: clamp(20px,4vw,54px); gap: 20px 30px;
+}
+.muse-counter h2 { font: 400 clamp(36px,4.3vw,65px)/1.1 Prata,Georgia,serif; letter-spacing: -.065em; grid-column: 1/-1 }
+.muse-counter .object-window {
+  background: radial-gradient(ellipse at 54% 40%,#f9e5d5,#d5a5a0 76%); min-height: clamp(290px,31vw,430px);
+  border-radius: 50% 50% 12px 12px / 18% 18% 12px 12px;
+}
+.muse-counter .orbit-button { border-radius: 100px }
+.muse-palette { align-self: center }
+.shade-story { font: 400 clamp(25px,3vw,45px)/1 Prata,Georgia,serif }
+.shade-story small { font: 500 13px/1.45 Manrope; color: var(--muted); display: inline-block; margin-top: 11px }
+.muse-swatches { display: flex; flex-wrap: wrap; gap: 9px; margin: 20px 0 }
+.muse-swatches button { border: 1px solid var(--rule); border-radius: 100px; padding: 5px 11px; min-height: 44px; background: transparent; display: inline-flex; gap: 7px; align-items: center; font-size: 12px }
+.muse-swatches button::before { content: ''; display: block; background: var(--shade); border-radius: 50%; width: 17px; height: 17px }
+.muse-swatches button[aria-pressed=true] { border-color: var(--ink); background: #fff1e9 }
+
+/* ELSEWHERE — the destination picker is the front page. */
+.travel { --base: #e8ece0; --ink: #192e25; --muted: #506357; --rule: #a8b3a6; --on-accent:#281912; color-scheme: light }
+.travel .logo span { color: #a83820 }
+.travel .header-action { border-radius: 100px; background: transparent; border-color: var(--ink); color: var(--ink) }
+.atlas { display: grid; grid-template-columns: 245px minmax(0,1fr); gap: 14px 20px }
+.atlas-title { grid-column: 1/-1; display: flex; align-items: end; justify-content: space-between; gap: 12px }
+.atlas-title h1 { font: 600 clamp(50px,8.2vw,121px)/1 Oswald; text-transform: uppercase; letter-spacing: -.045em }
+.atlas-title p { color: var(--muted); margin-bottom: 8px; font-size: 13px }
+.atlas-photo {
+  grid-column: 2; grid-row: 2; min-height: clamp(340px,56svh,600px); background: #284639;
+  display: flex; align-items: end; color: white;
+}
+.atlas-photo::before { content: ''; position: absolute; z-index: 1; inset: 0; background: linear-gradient(0deg,#101d16ed,transparent 65%); pointer-events: none }
+.atlas-photo figcaption { position: relative; z-index: 2; padding: clamp(19px,4vw,48px); }
+.atlas-photo h2 { font: 600 clamp(37px,5.7vw,77px)/1 Oswald; text-transform: uppercase }
+.atlas-photo p { font-size: 13px; margin: 8px 0 14px }
+.atlas-photo .button { border-radius: 100px }
+.atlas-picks { grid-column: 1; grid-row: 2; align-self: start; display: grid; gap: 6px }
+.atlas-picks button {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; min-height: 60px;
+  color: var(--ink); background: transparent; padding: 8px 13px;
+  border: 1px solid var(--rule); text-align: left; font-weight: 800;
+}
+.atlas-picks button[aria-pressed=true] { background: var(--ink); color: #f8f4e7; border-color: var(--ink) }
+.atlas-picks small { font-size: 11px; font-weight: 700 }
+.field-note { margin-top: 30px; display: grid; grid-template-columns: .85fr 1.15fr; border: 1px solid var(--rule) }
+.field-note > div { padding: clamp(21px,4vw,58px); align-self: center }
+.field-note h2 { font: 600 clamp(36px,5vw,68px)/1 Oswald; margin-bottom: 10px }
+.field-note p { color: var(--muted); max-width: 38ch }
+.field-note a { display: inline-block; border-bottom: 1px solid var(--ink); padding: 9px 0; margin-top: 10px; font-weight: 800; font-size: 13px }
+.field-note .object-window {
+  border-left: 1px solid var(--rule); color: #f6ede1; background:
+    repeating-linear-gradient(90deg,#faf5a117 0 1px,transparent 1px 27px),
+    repeating-linear-gradient(0deg,#faf5a117 0 1px,transparent 1px 27px),
+    radial-gradient(ellipse at center,#426855,#193729);
+}
+.field-note .orbit-button { border-radius: 100px }
+
+/* ATELIER — centered place card and a menu with a dining room photo. */
+.atelier { --base:#f4e9d8; --ink:#432920; --muted:#74574b; --accent:#5f3024; --rule:#cfb9a5; --on-accent:#fff5e8; --focus:#723f31; color-scheme: light }
+.atelier .site-header { grid-template-columns: 1fr auto 1fr }
+.atelier .logo { grid-column: 2; grid-row: 1; font-size: 34px }
+.atelier .site-nav { grid-column: 1; grid-row: 1; gap: 24px }
+.atelier .header-action { grid-column: 3; grid-row: 1 }
+.dinner { display: grid; position: relative; place-items: center; min-height: clamp(435px,72svh,690px); isolation: isolate }
+.dinner-photo,.dinner-photo::after { position: absolute; inset: 0; z-index: -1 }
+.dinner-photo::after { content: ''; background: #3118102c; z-index: 0 }
+.dinner-photo img { filter: brightness(.78) saturate(.83); object-position: 50% 51%; animation: frame-in .85s both }
+.dinner-card {
+  width: min(calc(100% - 42px),460px); outline: 1px solid #c5a48d; outline-offset: -9px;
+  padding: clamp(28px,4.5vw,69px) clamp(18px,3vw,45px); text-align: center;
+  background: #f7e6ce; box-shadow: 0 15px 50px #27130d47;
+}
+.dinner-card h1 { font: 600 clamp(53px,6vw,79px)/.85 var(--display); letter-spacing: -.055em; margin: 16px 0 19px }
+.dinner-card em { color: #884735 }
+.dinner-card p:not(.kicker) { color: var(--muted); font-size: 14px }
+.dinner-card .button { margin-top: 22px }
+.dinner-menu {
+  display: grid; grid-template-columns: 1.16fr .84fr; gap: clamp(16px,5vw,70px);
+  margin-top: clamp(23px,5vw,63px); padding-top: 20px; border-top: double 4px var(--rule);
+}
+.dinner-special h2 { font: 600 clamp(39px,5.2vw,72px)/1 var(--display); margin-bottom: 13px }
+.dinner-dishes article { display: grid; grid-template-columns: 1fr auto; gap: 3px 14px; border-bottom: 1px solid var(--rule); align-items: center; padding: 9px 0; }
+.dinner-dishes h3 { margin: 0; font: 600 clamp(22px,3vw,34px)/1 var(--display) }
+.dinner-dishes strong { white-space: nowrap; font: 700 12px Manrope; }
+.dinner-dishes p { grid-column: 1/-1; font-size: 12px; color: var(--muted) }
+.dinner-room { position: relative; min-height: 300px; max-height: 480px; background: #3b2a22; color: #fff4df }
+.dinner-room img { position: absolute; inset: 0; filter: saturate(.75) brightness(.72) }
+.dinner-room figcaption { position: absolute; inset: auto 0 0; padding: 15px; background: #281811b9 }
+.dinner-room a { display: flex; justify-content: space-between }
+.dinner-full-link { display: inline-flex; gap: 28px; padding-block: 9px; border-bottom: 1px solid var(--ink); font-size: 13px; font-weight: 800 }
+.plating { margin: 9px 0 }
+.plating summary { font-size: 13px; cursor: pointer; padding: 7px 0; min-height: 36px }
+.plating .object-window { min-height: 280px; background: radial-gradient(ellipse at 50% 42%,#eaccb0,#cda18b); color: #432920 }
+
+@media (max-width: 850px) {
+  .atlas { grid-template-columns: 162px minmax(0,1fr) }
+  .muse .shell { width: calc(100% - 38px) }
+  .muse .site-nav,.atelier .site-nav { gap: 12px }
+  .muse-cover-copy { padding-left: 10px }
+}
+@media (max-width: 660px) {
+  .form .site-header,.atelier .site-header,.muse .site-header { grid-template-columns: 1fr auto; gap: 0 8px }
+  .form .site-nav,.atelier .site-nav,.muse .site-nav { grid-row: 2; grid-column: 1/-1; justify-content: space-between; padding: 0 }
+  .atelier .site-header .logo,.muse .site-header .logo { grid-row: 1; grid-column: 1; justify-self: start }
+  .atelier .header-action,.muse .header-action { grid-column: 2 }
+  .muse .shell { width: calc(100% - 28px) }
+  .form-poster { min-height: 0; grid-template-rows: auto auto }
+  .form-poster-copy { padding: 23px 20px 0 }
+  .form-poster h1 { font-size: clamp(47px,12.3vw,74px); margin: 12px 0 15px; max-width: none }
+  .form-poster-copy > p:not(.kicker) { font-size: 13px }
+  .form-index-link { margin-top: 14px; padding: 7px 10px; min-height: 42px; }
+  .form-poster .object-window { position: relative; inset: auto; min-height: clamp(229px,70vw,350px); margin-top: -12px }
+  .form-poster .orbit-button { right: 11px; bottom: 11px }
+  .form-poster .object-window figcaption { top: auto; bottom: 14px; right: auto; left: 12px }
+  .form-quick { grid-template-columns: 1fr }
+  .form-quick figure { min-height: 0; height: 155px }
+  .form-price { padding-inline: 0 }
+  .muse-cover { min-height: 0; grid-template-columns: .4fr 1fr; grid-template-rows: auto auto auto; gap: 10px 0; }
+  .muse-cover h1 { font-size: clamp(42px,12.5vw,71px); padding: 14px 0 0; max-width: 7.75ch; align-self: start; }
+  .muse-cover-photo { grid-row: 1/3; margin-top: 72px; aspect-ratio: .86; }
+  .muse-cover-copy { grid-row: 3; grid-column: 1/-1; padding: 0; font-size: 13px; display: flex; align-items: start; gap: 12px }
+  .muse-cover-copy p { flex: 1 }
+  .muse-cover-copy a { margin: 0; padding-top: 0; white-space: nowrap; font-size: 12px; }
+  .muse-down { grid-row: 2; grid-column: 1; align-self: end; font-size: 11px; padding-right: 8px; flex-direction: column; align-items: start; gap: 3px; }
+  .muse-counter { padding: 17px; gap: 15px; grid-template-columns: 1fr; grid-template-rows: auto }
+  .muse-counter .object-window { min-height: clamp(240px,71vw,350px) }
+  .muse-counter h2 { font-size: 36px }
+  .muse-swatches { margin: 10px 0 }
+  .muse-swatches button { padding: 5px 8px }
+  .atlas { display: flex; flex-direction: column; gap: 9px }
+  .atlas-title { display: block }
+  .atlas-title h1 { font-size: clamp(44px,12vw,64px); margin: 9px 0 4px }
+  .atlas-title p { font-size: 12px; margin: 0 0 5px }
+  .atlas-picks { order: 1; display: grid; grid-template-columns: repeat(3,1fr); align-self: stretch; gap: 5px }
+  .atlas-picks button { display: flex; flex-direction: column; align-items: start; gap: 2px; min-height: 49px; padding: 5px 6px; font-size: 11px }
+  .atlas-picks small { font-size: 10px }
+  .atlas-photo { order: 2; min-height: clamp(300px,51svh,465px) }
+  .atlas-photo img { object-position: 61% center }
+  .atlas-photo figcaption { padding: 16px }
+  .field-note { grid-template-columns: 1fr; margin-top: 17px }
+  .field-note .object-window { min-height: 244px; border-left: 0; border-top: 1px solid var(--rule) }
+  .dinner { min-height: clamp(390px,61svh,480px) }
+  .dinner-card { width: calc(100% - 55px); }
+  .dinner-card h1 { font-size: 54px; }
+  .dinner-card p:not(.kicker) { font-size: 13px }
+  .dinner-menu { grid-template-columns: 1fr; margin-top: 25px }
+  .dinner-room { min-height: 155px }
+}
+@media (prefers-reduced-motion: reduce) { html:has(.home) { scroll-behavior: auto } }
+
+.chair-services { display: grid; grid-template-columns: .62fr 1.38fr; gap: 24px; align-items: start }
+.chair-services figure { min-height: 310px; position: relative; background: #272b20 }
+.chair-services figure img { position: absolute; inset: 0; filter: grayscale(.8) }
+.chair-services details { border-top: 1px solid var(--rule) }
+.chair-services details:last-child { border-bottom: 1px solid var(--rule) }
+.chair-services summary {
+  list-style: none; position: relative; cursor: pointer; padding: 11px 35px 11px 0;
+  font: 600 clamp(23px,3vw,37px)/1.14 Oswald; text-transform: uppercase;
+}
+.chair-services summary::-webkit-details-marker { display: none }
+.chair-services summary::after { content: '+'; color: var(--accent); position: absolute; right: 5px }
+.chair-services details[open] summary::after { content: '−' }
+.chair-service-info { padding: 0 0 18px; display: grid; justify-items: start; gap: 10px }
+.chair-service-info p { color: var(--muted); max-width: 44ch }
+.chair-service-info .info-line { color: var(--accent); font-size: 13px }
+
+.beauty-services { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px }
+.beauty-service { background: #efdbcF; padding: 12px 12px 18px; scroll-margin-top: 12px; }
+.beauty-service figure { height: clamp(130px,19vw,260px); border-radius: 45% 45% 0 0 / 34% 34% 0 0; overflow: hidden; background: #d6b1a4 }
+.beauty-service h2 { font: 400 clamp(23px,2.55vw,39px)/1.1 Prata,Georgia,serif; margin: 13px 0 10px; letter-spacing: -.055em }
+.beauty-service .info-line { font-size: 12px }
+.beauty-service p { font-size: 13px; color: var(--muted); margin: 9px 0 13px }
+
+.travel .detail { background: #f6f5e9; border: 1px solid var(--rule) }
+.travel .detail-copy ol { list-style: none; padding-left: 16px; border-left: 1px solid #a54e32; display: grid; gap: 7px }
+.travel .detail-copy li { position: relative }
+.travel .detail-copy li::before { content: ''; width:7px; height:7px; background:#a54e32; border-radius:50%; position:absolute; left:-20px; top:7px }
+.travel .choices button[aria-pressed=true] { color: #a83820; border-color: #a83820; box-shadow: 0 1px #a83820 }
+.menu-index { display: flex; justify-content: center; gap: clamp(18px,4vw,60px); padding: 5px 0 16px; font-size: 13px; font-weight: 800 }
+.menu-index a { padding: 6px 0; border-bottom: 1px solid var(--rule) }
+.menu-sheet { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); background: #fbefdb; border: double 5px var(--rule) }
+.menu-sheet-section { padding: clamp(14px,3vw,40px); scroll-margin-top: 12px }
+.menu-sheet-section + .menu-sheet-section { border-left: 1px solid var(--rule) }
+.menu-sheet-section h2 { font: 600 clamp(34px,4.5vw,60px)/1 var(--display); margin-bottom: 12px }
+.menu-sheet-section .menu-items div { padding: 8px 0; align-items: start }
+.menu-sheet-section .menu-items strong { white-space: nowrap; font-size: 12px; padding-top: 3px }
+@media (max-width:660px) {
+  .chair-services { grid-template-columns: 1fr; gap: 10px }
+  .chair-services figure { min-height: 145px }
+  .beauty-services { grid-template-columns: 1fr }
+  .beauty-service { display: grid; grid-template-columns: minmax(100px,.58fr) 1fr; gap: 5px 12px }
+  .beauty-service figure { grid-row: span 4; height: 100%; min-height: 160px }
+  .beauty-service h2 { margin: 2px 0 }
+  .beauty-service p { margin: 1px 0 }
+  .beauty-service .button { justify-self: start }
+  .menu-sheet { grid-template-columns: 1fr }
+  .menu-sheet-section + .menu-sheet-section { border-left: 0; border-top: double 3px var(--rule) }
+}
+@media (max-width:660px) {
+  .muse-cover-photo { position: relative }
+  .muse-cover-photo::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(145deg,#f7ebe1d9,transparent 44%);
+  }
+  .muse-cover h1 { text-shadow: 0 1px 7px #f7ebe1b0 }
+}

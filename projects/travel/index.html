@@ -9,45 +9,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Oswald:wght@500;600&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
-  <link rel="stylesheet" href="../editorial-v1.css">
-  <script type="module" src="../objects-v1.js"></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
+  <script type="module" src="../objects-v2.js"></script>
 </head>
 <body class="travel" data-legacy-links="{&quot;intro&quot;: &quot;approach.html&quot;, &quot;routes&quot;: &quot;routes.html&quot;, &quot;approach&quot;: &quot;approach.html&quot;}">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="ELSEWHERE — главная">elsewhere<span>→</span></a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html" aria-current="page">Главная</a><a href="routes.html">Маршруты</a><a href="approach.html">Как едем</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="ELSEWHERE — главная">elsewhere<span>→</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2" aria-current="page">Главная</a><a href="routes.html">Маршруты</a><a href="approach.html">Как едем</a></nav>
     <a class="button header-action" href="booking.html">Подобрать тур <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell home" id="main">
-    <section class="home-cover">
-      <div class="home-copy">
-        <p class="kicker">Путешествия малыми группами</p>
-        <h1>Туда, где<em>чувствуешь.</em></h1>
-        <p>Исландия, Доломиты и Марокко. В каждом маршруте есть время остановиться и посмотреть вокруг.</p>
-        <div class="home-actions">
-          <a class="button" href="routes.html">Смотреть маршруты <span aria-hidden="true">→</span></a>
-          
-        </div>
+    <section class="atlas" aria-label="Путешествия">
+      <div class="atlas-title">
+        <h1>Куда поедем?</h1>
+        <p>Путешествия малыми группами</p>
       </div>
-      <figure class="hero-media"><img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="100vw" alt="Водопад среди зелёных склонов" fetchpriority="high"></figure>
-      <div class="scene-picker"><div class="choices" role="group" aria-label="Пейзаж на обложке" data-picker><button type="button" aria-pressed="true" data-scene="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" data-scene-set="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" data-description="Водопад среди зелёных склонов">Исландия</button><button type="button" aria-pressed="false" data-scene="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" data-scene-set="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" data-description="Горные пики над облаками">Доломиты</button><button type="button" aria-pressed="false" data-scene="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" data-scene-set="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" data-description="Дюны на закате">Марокко</button></div></div>
-    </section>
-    <a class="edition-jump" href="#edition">Рельеф маршрута <span aria-hidden="true">↓</span></a>
-    <section class="edition" id="edition" aria-labelledby="edition-title">
-      <figure class="object-window">
-        <img class="object-poster" src="../objects/travel.png" alt="Горный массив" loading="lazy">
-        <canvas data-object="travel" aria-hidden="true" hidden></canvas>
-        <figcaption>Горный массив</figcaption>
-        <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
+      <div class="atlas-picks" data-picker role="group" aria-label="Выбрать направление">
+          <button type="button" aria-pressed="true" data-scene="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" data-scene-set="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" data-description="Водопад среди зелёных склонов" data-route="iceland" data-place="Исландия" data-excerpt="Водопады, чёрный песок и ледниковые лагуны."><span>Исландия</span><small>8 дней</small></button>
+          <button type="button" aria-pressed="false" data-scene="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" data-scene-set="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" data-description="Горные пики над облаками" data-route="dolomites" data-place="Доломиты" data-excerpt="Горные озёра, перевал и прогулки по долинам."><span>Доломиты</span><small>6 дней</small></button>
+          <button type="button" aria-pressed="false" data-scene="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" data-scene-set="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" data-description="Дюны на закате" data-route="morocco" data-place="Марокко" data-excerpt="Марракеш, Атласские горы и ночь у дюн."><span>Марокко</span><small>9 дней</small></button>
+      </div>
+      <figure class="atlas-photo hero-media"><img src="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1476610182048-b716b8518aae?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="100vw" alt="Водопад среди зелёных склонов" fetchpriority="high">
+        <figcaption><h2 data-place-name>Исландия</h2><p data-place-excerpt>Водопады, чёрный песок и ледниковые лагуны.</p>
+          <a class="button" data-place-link href="routes.html#iceland">Маршрут по дням <span aria-hidden="true">→</span></a>
+        </figcaption>
       </figure>
-      <div class="edition-copy">
-        <h2 id="edition-title">Выше облаков.</h2>
-        <p>Шесть дней в Доломитах: прогулки у озёр, горные деревни и выход на перевал, если позволит погода.</p>
-        
-        <div class="edition-links"><a href="routes.html#dolomites">Маршрут по дням <span aria-hidden="true">→</span></a><a href="approach.html">Как устроена поездка <span aria-hidden="true">→</span></a></div>
+    </section>
+    <section class="field-note" id="edition">
+      <div>
+        <h2>Доломиты сверху</h2>
+        <p>От озёр в долине до горного перевала. Посмотри программу и выбери, подходит ли тебе темп.</p>
+        <a href="routes.html#dolomites">Программа на 6 дней <span aria-hidden="true">→</span></a>
       </div>
+      <figure class="object-window ">
+      <img class="object-poster" src="../objects/travel.png" alt="Модель горного рельефа" loading="lazy">
+      <canvas data-object="travel" aria-hidden="true" hidden></canvas>
+      <figcaption>Модель горного рельефа</figcaption>
+      <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
+    </figure>
     </section>
   </main>
   <footer class="site-footer shell">

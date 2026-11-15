@@ -9,30 +9,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
 </head>
 <body class="atelier">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="ATELIER — главная">ATELIER</a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="menu.html" aria-current="page">Меню</a><a href="space.html">Зал</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="ATELIER — главная">ATELIER</a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2">Главная</a><a href="menu.html" aria-current="page">Меню</a><a href="space.html">Зал</a></nav>
     <a class="button header-action" href="booking.html">Забронировать <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell" id="main">
-    <div class="page-head"><h1>Меню</h1><p>Выбери раздел, чтобы посмотреть блюда и цены.</p></div>
-    <div class="choices" role="group" aria-label="Меню" data-picker><button type="button" aria-controls="mains" aria-pressed="true">Основное</button><button type="button" aria-controls="desserts" aria-pressed="false">Десерты</button><button type="button" aria-controls="drinks" aria-pressed="false">Вино</button></div>
-    <article class="detail" id="mains">
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Тарелка пасты" decoding="async"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Кухня</h2><div class="menu-items"><div><span>Томаты со страчателлой</span><strong>24 BYN</strong><small>Базилик, оливковое масло, тёплый хлеб</small></div><div><span>Паста с креветками</span><strong>38 BYN</strong><small>Томатный соус, чеснок, свежие травы</small></div><div><span>Стейк с огня</span><strong>56 BYN</strong><small>Печёные овощи, соус из трав</small></div></div></div>
-    </article>
-    <article class="detail" id="desserts" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Десерт на тарелке" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Десерты</h2><div class="menu-items"><div><span>Тарт с ягодами</span><strong>18 BYN</strong><small>Песочное тесто, ванильный крем</small></div><div><span>Шоколадный торт</span><strong>19 BYN</strong><small>Тёмный шоколад, сливки</small></div><div><span>Сорбет дня</span><strong>12 BYN</strong><small>Спросите о вкусе сезона</small></div></div></div>
-    </article>
-    <article class="detail" id="drinks" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Вино на столе" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Вино по бокалам</h2><div class="menu-items"><div><span>Рислинг</span><strong>17 BYN</strong><small>Свежий, с цитрусовой кислотностью</small></div><div><span>Пино нуар</span><strong>21 BYN</strong><small>Красные ягоды и лёгкая пряность</small></div><div><span>Игристое брют</span><strong>19 BYN</strong><small>Сухое, с нотами зелёного яблока</small></div></div></div>
-    </article>
+<div class="page-head"><h1>Меню</h1><p>Сезонная кухня и вино по бокалам.</p></div>
+        <nav class="menu-index" aria-label="Разделы меню"><a href="#mains">Основное</a><a href="#desserts">Десерты</a><a href="#drinks">Вино</a></nav>
+        <div class="menu-sheet">
+        <section class="menu-sheet-section" id="mains">
+          <h2>Кухня</h2>
+          <div class="menu-items"><div><span>Томаты со страчателлой</span><strong>24 BYN</strong><small>Базилик, оливковое масло, тёплый хлеб</small></div><div><span>Паста с креветками</span><strong>38 BYN</strong><small>Томатный соус, чеснок, свежие травы</small></div><div><span>Стейк с огня</span><strong>56 BYN</strong><small>Печёные овощи, соус из трав</small></div></div>
+        </section>
+        <section class="menu-sheet-section" id="desserts">
+          <h2>Десерты</h2>
+          <div class="menu-items"><div><span>Тарт с ягодами</span><strong>18 BYN</strong><small>Песочное тесто, ванильный крем</small></div><div><span>Шоколадный торт</span><strong>19 BYN</strong><small>Тёмный шоколад, сливки</small></div><div><span>Сорбет дня</span><strong>12 BYN</strong><small>Спросите о вкусе сезона</small></div></div>
+        </section>
+        <section class="menu-sheet-section" id="drinks">
+          <h2>Вино по бокалам</h2>
+          <div class="menu-items"><div><span>Рислинг</span><strong>17 BYN</strong><small>Свежий, с цитрусовой кислотностью</small></div><div><span>Пино нуар</span><strong>21 BYN</strong><small>Красные ягоды и лёгкая пряность</small></div><div><span>Игристое брют</span><strong>19 BYN</strong><small>Сухое, с нотами зелёного яблока</small></div></div>
+        </section></div>
   </main>
   <footer class="site-footer shell">
     <a href="../../#work">← Все проекты</a>

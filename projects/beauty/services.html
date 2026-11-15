@@ -9,30 +9,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Prata&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
 </head>
 <body class="muse">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="MUSE — главная">muse<span>®</span></a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="services.html" aria-current="page">Услуги</a><a href="looks.html">Мудборд</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="MUSE — главная">muse<span>®</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2">Главная</a><a href="services.html" aria-current="page">Услуги</a><a href="looks.html">Мудборд</a></nav>
     <a class="button header-action" href="booking.html">Записаться <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell" id="main">
-    <div class="page-head"><h1>Услуги студии</h1><p>Выбери, на что хочешь записаться.</p></div>
-    <div class="choices" role="group" aria-label="Услуги студии" data-picker><button type="button" aria-controls="hair" aria-pressed="true">Волосы</button><button type="button" aria-controls="makeup" aria-pressed="false">Макияж</button><button type="button" aria-controls="care" aria-pressed="false">Уход</button></div>
-    <article class="detail" id="hair">
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Стилист работает с волосами" decoding="async"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Стрижка и укладка</h2><div class="info-line"><span>от 90 BYN</span><span>60–90 минут</span></div><p>Форма, которую легко уложить дома. Можно начать с консультации по длине и текстуре.</p><a class="button" href="booking.html?choice=%D0%A1%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0+%D0%B8+%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0">Записаться <span aria-hidden="true">→</span></a></div>
-    </article>
-    <article class="detail" id="makeup" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Кисти и палитра для макияжа" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Макияж</h2><div class="info-line"><span>от 110 BYN</span><span>60 минут</span></div><p>Мягкий дневной макияж или акцент на вечер. Обсудим повод, оттенки и желаемый эффект.</p><a class="button" href="booking.html?choice=%D0%9C%D0%B0%D0%BA%D0%B8%D1%8F%D0%B6">Записаться <span aria-hidden="true">→</span></a></div>
-    </article>
-    <article class="detail" id="care" hidden>
-      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Интерьер салона" loading="lazy"></figure>
-      <div class="detail-copy"><h2 data-panel-title>Уход за волосами</h2><div class="info-line"><span>от 70 BYN</span><span>45 минут</span></div><p>Подберём уход по состоянию волос и объясним, как поддерживать результат дома.</p><a class="button" href="booking.html?choice=%D0%A3%D1%85%D0%BE%D0%B4+%D0%B7%D0%B0+%D0%B2%D0%BE%D0%BB%D0%BE%D1%81%D0%B0%D0%BC%D0%B8">Записаться <span aria-hidden="true">→</span></a></div>
-    </article>
+<div class="page-head"><h1>Услуги студии</h1><p>Выбери, на что хочешь записаться.</p></div><div class="beauty-services">
+        <article class="beauty-service" id="hair">
+          <figure><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Стилист работает с волосами" loading="lazy"></figure>
+          <h2>Стрижка и укладка</h2>
+          <div class="info-line"><span>от 90 BYN</span><span>60–90 минут</span></div><p>Форма, которую легко уложить дома. Можно начать с консультации по длине и текстуре.</p><a class="button" href="booking.html?choice=%D0%A1%D1%82%D1%80%D0%B8%D0%B6%D0%BA%D0%B0+%D0%B8+%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0">Записаться <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="beauty-service" id="makeup">
+          <figure><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Кисти и палитра для макияжа" loading="lazy"></figure>
+          <h2>Макияж</h2>
+          <div class="info-line"><span>от 110 BYN</span><span>60 минут</span></div><p>Мягкий дневной макияж или акцент на вечер. Обсудим повод, оттенки и желаемый эффект.</p><a class="button" href="booking.html?choice=%D0%9C%D0%B0%D0%BA%D0%B8%D1%8F%D0%B6">Записаться <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="beauty-service" id="care">
+          <figure><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Интерьер салона" loading="lazy"></figure>
+          <h2>Уход за волосами</h2>
+          <div class="info-line"><span>от 70 BYN</span><span>45 минут</span></div><p>Подберём уход по состоянию волос и объясним, как поддерживать результат дома.</p><a class="button" href="booking.html?choice=%D0%A3%D1%85%D0%BE%D0%B4+%D0%B7%D0%B0+%D0%B2%D0%BE%D0%BB%D0%BE%D1%81%D0%B0%D0%BC%D0%B8">Записаться <span aria-hidden="true">→</span></a>
+        </article></div>
   </main>
   <footer class="site-footer shell">
     <a href="../../#work">← Все проекты</a>

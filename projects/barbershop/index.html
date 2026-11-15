@@ -9,44 +9,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
-  <link rel="stylesheet" href="../editorial-v1.css">
-  <script type="module" src="../objects-v1.js"></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
+  <script type="module" src="../objects-v2.js"></script>
 </head>
 <body class="form" data-legacy-links="{&quot;services&quot;: &quot;services.html&quot;, &quot;culture&quot;: &quot;studio.html&quot;, &quot;looks&quot;: &quot;studio.html&quot;}">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="FORM — главная">FORM<span>®</span></a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="studio.html">Барбершоп</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="FORM — главная">FORM<span>®</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="studio.html">Барбершоп</a></nav>
     <a class="button header-action" href="booking.html">Записаться <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell home" id="main">
-    <section class="home-cover">
-      <div class="home-copy">
+    <section class="form-poster">
+      <div class="form-poster-copy">
         <p class="kicker">Барбершоп</p>
         <h1>Твоя форма.<em>Твои правила.</em></h1>
-        <p>Стрижки и борода с учётом того, как ты носишь волосы каждый день.</p>
-        <div class="home-actions">
-          <a class="button" href="services.html">Услуги и цены <span aria-hidden="true">→</span></a>
-          <a class="button ghost" href="booking.html">Выбрать время <span aria-hidden="true">→</span></a>
-        </div>
+        <p>Стрижка и борода с учётом того, как ты носишь волосы каждый день.</p>
+        <a class="form-index-link" href="#edition">Услуги и цены <span aria-hidden="true">↓</span></a>
       </div>
-      <figure class="hero-media"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер подравнивает бороду" fetchpriority="high"></figure>
-      
+      <figure class="object-window ">
+      <img class="object-poster" src="../objects/form.png" alt="Барберские ножницы" loading="lazy">
+      <canvas data-object="form" aria-hidden="true" hidden></canvas>
+      <figcaption>Барберские ножницы</figcaption>
+      <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
+    </figure>
     </section>
-    <a class="edition-jump" href="#edition">Инструмент барбера <span aria-hidden="true">↓</span></a>
-    <section class="edition" id="edition" aria-labelledby="edition-title">
-      <figure class="object-window">
-        <img class="object-poster" src="../objects/form.png" alt="Ножницы" loading="lazy">
-        <canvas data-object="form" aria-hidden="true" hidden></canvas>
-        <figcaption>Ножницы</figcaption>
-        <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
-      </figure>
-      <div class="edition-copy">
-        <h2 id="edition-title">Форма решает.</h2>
-        <p>Направление роста волос и привычная укладка подсказывают, где оставить длину и где открыть контур.</p>
-        
-        <div class="edition-links"><a href="services.html#haircut">Стрижка · 55 BYN <span aria-hidden="true">→</span></a><a href="services.html#beard">Борода · 35 BYN <span aria-hidden="true">→</span></a></div>
+    <section class="form-quick" id="edition">
+      <figure><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер подравнивает бороду" loading="lazy"></figure>
+      <div class="form-price">
+        <h2>В кресле FORM</h2>
+        <div class="price-board">
+        <a href="services.html#haircut"><strong>Стрижка</strong><span>60 мин</span><span>55 BYN</span><i aria-hidden="true">→</i></a>
+        <a href="services.html#beard"><strong>Борода</strong><span>30 мин</span><span>35 BYN</span><i aria-hidden="true">→</i></a>
+        <a href="services.html#full"><strong>Полный образ</strong><span>90 мин</span><span>80 BYN</span><i aria-hidden="true">→</i></a></div>
+        <a class="button ghost" href="services.html">Посмотреть все услуги <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>

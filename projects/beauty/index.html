@@ -9,48 +9,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Prata&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
-  <script src="../showcase-v1.js" defer></script>
-  <link rel="stylesheet" href="../editorial-v1.css">
-  <script type="module" src="../objects-v1.js"></script>
+  <link rel="stylesheet" href="../art-v2.css">
+  <script src="../showcase-v2.js" defer></script>
+  <script type="module" src="../objects-v2.js"></script>
 </head>
 <body class="muse" data-legacy-links="{&quot;philosophy&quot;: &quot;./&quot;, &quot;rituals&quot;: &quot;services.html&quot;, &quot;moods&quot;: &quot;looks.html&quot;}">
   <a class="skip" href="#main">К содержанию</a>
   <header class="site-header shell">
-    <a class="logo" href="./" aria-label="MUSE — главная">muse<span>®</span></a>
-    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="looks.html">Мудборд</a></nav>
+    <a class="logo" href="./?v=design2" aria-label="MUSE — главная">muse<span>®</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="./?v=design2" aria-current="page">Главная</a><a href="services.html">Услуги</a><a href="looks.html">Мудборд</a></nav>
     <a class="button header-action" href="booking.html">Записаться <span aria-hidden="true">→</span></a>
   </header>
   <main class="stage shell home" id="main">
-    <section class="home-cover">
-      <div class="home-copy">
-        <p class="kicker">Студия красоты</p>
-        <h1>Красота.<em>В твоём ритме.</em></h1>
+    <section class="muse-cover">
+      <h1>Красота в твоём <em>ритме.</em></h1>
+      <figure class="muse-cover-photo"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Портрет девушки с волнистыми волосами" fetchpriority="high"></figure>
+      <div class="muse-cover-copy">
         <p>Стрижка, макияж и уход. Подберём образ под твои планы и привычки.</p>
-        <div class="home-actions">
-          <a class="button" href="services.html">Выбрать услугу <span aria-hidden="true">→</span></a>
-          
-        </div>
+        <a href="services.html">Услуги студии <span aria-hidden="true">→</span></a>
       </div>
-      <figure class="hero-media"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Портрет девушки с волнистыми волосами" fetchpriority="high"></figure>
-      
+      <a class="muse-down" href="#edition">Примерь оттенок <span aria-hidden="true">↓</span></a>
     </section>
-    <a class="edition-jump" href="#edition">Деталь образа <span aria-hidden="true">↓</span></a>
-    <section class="edition" id="edition" aria-labelledby="edition-title">
-      <figure class="object-window">
-        <img class="object-poster" src="../objects/muse.png" alt="Помада" loading="lazy">
-        <canvas data-object="muse" aria-hidden="true" hidden></canvas>
-        <figcaption>Помада</figcaption>
-        <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
-      </figure>
-      <div class="edition-copy">
-        <h2 id="edition-title">Один оттенок меняет образ.</h2>
-        <p>Тёплый коралл, мягкий розовый или глубокий винный. Начни с оттенка, а свет и контраст примерь в мудборде.</p>
-        <div class="shades" role="group" aria-label="Оттенок помады" data-model-controls hidden>
-          <button type="button" style="--shade:#b84446" data-shade="coral" aria-label="Коралл" aria-pressed="true"></button>
-          <button type="button" style="--shade:#a75571" data-shade="rose" aria-label="Розовый" aria-pressed="false"></button>
-          <button type="button" style="--shade:#69243d" data-shade="wine" aria-label="Винный" aria-pressed="false"></button>
+    <section class="muse-counter" id="edition">
+      <h2>Примерочная цвета</h2>
+      <figure class="object-window ">
+      <img class="object-poster" src="../objects/muse.png" alt="Помада" loading="lazy">
+      <canvas data-object="muse" aria-hidden="true" hidden></canvas>
+      <figcaption>Помада</figcaption>
+      <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
+    </figure>
+      <div class="muse-palette">
+        <p class="shade-story" aria-live="polite" data-shade-story>Коралл<br><small>Тёплый тон с красным подтоном.</small></p>
+        <div class="muse-swatches" role="group" aria-label="Оттенок помады" data-model-controls hidden>
+          <button type="button" style="--shade:#b84446" data-shade="coral" data-tone="Коралл" data-note="Тёплый тон с красным подтоном." aria-pressed="true">Коралл</button>
+          <button type="button" style="--shade:#a75571" data-shade="rose" data-tone="Розовый" data-note="Приглушённый цвет с холодным подтоном." aria-pressed="false">Розовый</button>
+          <button type="button" style="--shade:#69243d" data-shade="wine" data-tone="Винный" data-note="Глубокий ягодный акцент." aria-pressed="false">Винный</button>
         </div>
-        <div class="edition-links"><a href="looks.html">Открыть мудборд <span aria-hidden="true">→</span></a><a href="services.html#makeup">Макияж · от 110 BYN <span aria-hidden="true">→</span></a></div>
+        <a class="button ghost" href="looks.html">Открыть мудборд <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
