@@ -1,0 +1,81 @@
+html:has(.edition) { scroll-behavior: smooth }
+.home.stage { margin-top: 0; padding-bottom: clamp(26px,5vw,70px) }
+.home .home-cover { min-height: min(var(--hero-height), max(445px,calc(100svh - 167px))) }
+.edition-jump {
+  display: flex; min-height: 54px; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid var(--rule); font-size: 13px; padding: 0 3px;
+}
+.edition-jump span { color: var(--accent); font-size: 21px; transition: transform .2s }
+.edition-jump:hover span { transform: translateY(4px) }
+.edition {
+  display: grid; grid-template-columns: 1.23fr .77fr; align-items: stretch;
+  margin-top: clamp(20px,4vw,60px); scroll-margin-top: 16px;
+}
+.edition-copy {
+  display: flex; flex-direction: column; align-items: start; justify-content: center;
+  gap: 20px; padding: clamp(23px,5vw,72px);
+  background: color-mix(in srgb,var(--base),var(--ink) 6%);
+}
+.edition h2 { font: 500 clamp(39px,5.2vw,90px)/.98 var(--display); letter-spacing: -.05em; text-wrap: balance }
+.edition-copy p { max-width: 40ch; color: var(--muted) }
+.edition-links { width: 100%; max-width: 360px }
+.edition-links a {
+  display: flex; align-items: center; gap: 15px; justify-content: space-between;
+  min-height: 45px; padding-block: 8px; border-bottom: 1px solid var(--rule); font-size: 13px; font-weight: 800;
+}
+.edition-links a:first-child { border-top: 1px solid var(--rule) }
+.edition-links a:hover, .edition-links span { color: var(--accent) }
+.object-window {
+  display: grid; place-items: center; min-height: clamp(340px,41vw,610px);
+  position: relative; isolation: isolate; overflow: hidden;
+  background: radial-gradient(ellipse at 51% 45%,var(--model-light),var(--model-dark) 75%);
+  color: var(--model-text);
+}
+.form { --model-light:#4c503c; --model-dark:#171913; --model-text:#f3f3e8 }
+.muse { --model-light:#fbe6db; --model-dark:#d8a396; --model-text:#512b38 }
+.travel { --model-light:#355647; --model-dark:#152a24; --model-text:#f8f4e6 }
+.atelier { --model-light:#63402c; --model-dark:#271a14; --model-text:#fff0d9 }
+.object-window::before {
+  content:''; position:absolute; width: 48%; height: 21%; left: 26%; top: 67%;
+  border-radius: 50%; background: #1a141141; filter: blur(24px); transform: rotate(-11deg);
+  pointer-events: none;
+}
+.object-window::after {
+  content:''; position:absolute; inset: 12px; pointer-events:none;
+  border: 1px solid color-mix(in srgb,var(--model-text),transparent 83%);
+}
+.object-window canvas, .object-poster { width:100%; height:100%; display:block; position:absolute; inset:0 }
+.object-window canvas { z-index:1; cursor: grab; touch-action: pan-y }
+.object-window canvas:active { cursor: grabbing }
+.object-poster { object-fit: contain; z-index:0 }
+.object-window figcaption { position:absolute; z-index:2; left:24px; bottom:23px; font-size:11px; letter-spacing:.07em }
+.orbit-button {
+  z-index:2; position:absolute; right:24px; bottom:22px; display:inline-flex; align-items:center;
+  gap:9px; min-height:38px; border:1px solid currentColor; background:var(--model-dark);
+  padding:5px 10px; border-radius:100px; color:inherit; font-size:12px; cursor:pointer;
+}
+.orbit-button:hover { background:var(--model-light) }
+.shades { display:flex; flex-wrap:wrap; gap:8px }
+.shades button { border:1px solid transparent; background:none; border-radius:50%; width:42px; height:42px; display:grid; place-items:center; padding:4px }
+.shades button::after { content:''; width:100%; height:100%; background:var(--shade); border-radius:50% }
+.shades button[aria-pressed=true] { border-color:var(--ink) }
+.muse .edition { grid-template-columns: .82fr 1.18fr }
+.muse .object-window { grid-column:2; grid-row:1 }
+.muse .edition-copy { grid-column:1; grid-row:1 }
+@media (max-width:660px) {
+  .home .home-cover { min-height:0 }
+  .travel .home .home-cover { min-height:clamp(410px,calc(100svh - 225px),650px) }
+  .home .hero-media { min-height:clamp(168px,27svh,245px) }
+  .edition-jump { min-height:47px; font-size:12px }
+  .edition,.muse .edition { grid-template-columns:1fr }
+  .muse .object-window,.muse .edition-copy { grid-column:auto; grid-row:auto }
+  .object-window { min-height:clamp(245px,77vw,390px) }
+  .edition-copy { gap:14px; padding:23px 18px 24px }
+  .edition h2 { font-size:clamp(36px,10vw,53px) }
+  .edition-copy p { font-size:14px }
+  .object-window figcaption { left:20px; bottom:21px }
+  .orbit-button { right:18px; bottom:18px }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:has(.edition) { scroll-behavior:auto }
+}

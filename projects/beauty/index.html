@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Prata&amp;display=swap">
   <link rel="stylesheet" href="../showcase-v1.css">
   <script src="../showcase-v1.js" defer></script>
+  <link rel="stylesheet" href="../editorial-v1.css">
+  <script type="module" src="../objects-v1.js"></script>
 </head>
 <body class="muse" data-legacy-links="{&quot;philosophy&quot;: &quot;./&quot;, &quot;rituals&quot;: &quot;services.html&quot;, &quot;moods&quot;: &quot;looks.html&quot;}">
   <a class="skip" href="#main">К содержанию</a>
@@ -31,6 +33,25 @@
       </div>
       <figure class="hero-media"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1800&amp;q=83 1800w" sizes="(max-width: 660px) 100vw, 60vw" alt="Портрет девушки с волнистыми волосами" fetchpriority="high"></figure>
       
+    </section>
+    <a class="edition-jump" href="#edition">Деталь образа <span aria-hidden="true">↓</span></a>
+    <section class="edition" id="edition" aria-labelledby="edition-title">
+      <figure class="object-window">
+        <img class="object-poster" src="../objects/muse.png" alt="Помада" loading="lazy">
+        <canvas data-object="muse" aria-hidden="true" hidden></canvas>
+        <figcaption>Помада</figcaption>
+        <button type="button" class="orbit-button" data-orbit hidden>Повернуть <span aria-hidden="true">→</span></button>
+      </figure>
+      <div class="edition-copy">
+        <h2 id="edition-title">Один оттенок меняет образ.</h2>
+        <p>Тёплый коралл, мягкий розовый или глубокий винный. Начни с оттенка, а свет и контраст примерь в мудборде.</p>
+        <div class="shades" role="group" aria-label="Оттенок помады" data-model-controls hidden>
+          <button type="button" style="--shade:#b84446" data-shade="coral" aria-label="Коралл" aria-pressed="true"></button>
+          <button type="button" style="--shade:#a75571" data-shade="rose" aria-label="Розовый" aria-pressed="false"></button>
+          <button type="button" style="--shade:#69243d" data-shade="wine" aria-label="Винный" aria-pressed="false"></button>
+        </div>
+        <div class="edition-links"><a href="looks.html">Открыть мудборд <span aria-hidden="true">→</span></a><a href="services.html#makeup">Макияж · от 110 BYN <span aria-hidden="true">→</span></a></div>
+      </div>
     </section>
   </main>
   <footer class="site-footer shell">
