@@ -80,3 +80,6 @@ h1 em:after{display:none}
  .team-orbit-two{width:205px;height:205px}
 }
 @media(prefers-reduced-motion:reduce){.hero-photo,.hero-stamp{animation:none}.hero-photo img{transition:none}}
+
+/* Restore the two-person illustration, with the brighter studio palette. */
+.team-art{background:var(--accent);min-height:470px;position:relative;overflow:hidden}.face{position:absolute;width:180px;height:225px;display:flex;gap:30px;align-items:center;justify-content:center;border:2px solid var(--ink);border-radius:95px;background:#eff0d7}.face-one{left:12%;top:14%;transform:rotate(-14deg);animation:bob 5s ease-in-out infinite}.face-two{right:8%;bottom:14%;transform:rotate(14deg);background:#283321;animation:bob 5s ease-in-out -2s infinite}.face i{width:9px;height:24px;border-radius:50%;background:var(--ink);margin-bottom:25px}.face b{position:absolute;bottom:58px;width:45px;height:25px;border:2px solid var(--ink);border-top:0;border-radius:0 0 30px 30px}.face-two i{background:var(--accent)}.face-two b{border-color:var(--accent)}.art-caption{position:absolute;z-index:1;bottom:20px;left:25px;background:transparent;color:var(--ink);padding:0;font-size:8px;letter-spacing:1.5px}@media(max-width:760px){.team-art{height:330px;min-height:330px}.face{width:150px;height:190px}.face b{bottom:45px}}@media(prefers-reduced-motion:reduce){.face-one,.face-two{animation:none}}
