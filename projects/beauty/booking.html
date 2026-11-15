@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MUSE — Запись в студию</title>
+  <meta name="description" content="Стрижка, укладка, макияж и уход. Подбор образа и демонстрация записи.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Prata&amp;display=swap">
+  <link rel="stylesheet" href="../showcase-v1.css">
+  <script src="../showcase-v1.js" defer></script>
+</head>
+<body class="muse">
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="site-header shell">
+    <a class="logo" href="./" aria-label="MUSE — главная">muse<span>®</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="looks.html">Мудборд</a></nav>
+    <a class="button header-action" aria-current="page" href="booking.html">Записаться <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="stage shell" id="main">
+    <section class="form-layout">
+      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Портрет девушки с волнистыми волосами" decoding="async"></figure>
+      <div class="booking-box">
+        <h1>Запись в студию</h1>
+        <p>Можно пройти весь сценарий. Данные останутся у вас.</p>
+        <form data-booking>
+          <div class="booking-fields">
+            <label><span>Услуга</span><select name="choice"><option>Стрижка и укладка</option><option>Макияж</option><option>Уход за волосами</option></select></label>
+            <label><span>Дата</span><input type="date" name="date" required></label><label><span>Время</span><select name="time"><option>10:00</option><option>12:00</option><option>14:00</option><option>16:00</option><option>18:00</option></select></label>
+          </div>
+          <button class="button" type="submit">Посмотреть итог <span aria-hidden="true">→</span></button>
+        </form>
+        <output data-confirmation hidden>
+          <h2 tabindex="-1">Ваши детали</h2>
+          <p data-summary></p>
+          <p>Это демонстрация. Заявка не отправлена.</p>
+          <button class="button ghost" type="button">Изменить выбор</button>
+        </output>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer shell">
+    <a href="../../#work">← Все проекты</a>
+    <span>Демонстрационный сайт</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FORM — Выбери время</title>
+  <meta name="description" content="Стрижки и оформление бороды. Услуги, цены и демонстрация записи.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="../showcase-v1.css">
+  <script src="../showcase-v1.js" defer></script>
+</head>
+<body class="form">
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="site-header shell">
+    <a class="logo" href="./" aria-label="FORM — главная">FORM<span>®</span></a>
+    <nav class="site-nav" aria-label="Разделы сайта"><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="studio.html">Барбершоп</a></nav>
+    <a class="button header-action" aria-current="page" href="booking.html">Записаться <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="stage shell" id="main">
+    <section class="form-layout">
+      <figure class="feature-media"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83" srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=640&amp;q=83 640w, https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&amp;fit=crop&amp;w=1080&amp;q=83 1080w" sizes="(max-width: 660px) 100vw, 60vw" alt="Барбер подравнивает бороду" decoding="async"></figure>
+      <div class="booking-box">
+        <h1>Выбери время</h1>
+        <p>Можно пройти весь сценарий. Данные останутся у вас.</p>
+        <form data-booking>
+          <div class="booking-fields">
+            <label><span>Услуга</span><select name="choice"><option>Мужская стрижка</option><option>Борода и контур</option><option>Полный образ</option><option>Стрижка машинкой</option></select></label>
+            <label><span>Дата</span><input type="date" name="date" required></label><label><span>Время</span><select name="time"><option>10:00</option><option>12:00</option><option>14:00</option><option>16:00</option><option>18:00</option><option>20:00</option></select></label>
+          </div>
+          <button class="button" type="submit">Посмотреть итог <span aria-hidden="true">→</span></button>
+        </form>
+        <output data-confirmation hidden>
+          <h2 tabindex="-1">Ваши детали</h2>
+          <p data-summary></p>
+          <p>Это демонстрация. Заявка не отправлена.</p>
+          <button class="button ghost" type="button">Изменить выбор</button>
+        </output>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer shell">
+    <a href="../../#work">← Все проекты</a>
+    <span>Демонстрационный сайт</span>
+  </footer>
+</body>
+</html>
