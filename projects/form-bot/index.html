@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FORM — демо Telegram-бота записи</title>
+  <meta name="description" content="Попробуйте записаться в барбершоп через демо Telegram-бота FORM.">
+  <meta name="theme-color" content="#171914">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Oswald:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="top shell">
+    <a class="return" href="../../?v=bot1#work"><span aria-hidden="true">←</span> Все проекты</a>
+    <a class="site-link" href="../barbershop/?v=design3">Сайт FORM <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="layout shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">FORM / Telegram-бот</p>
+      <h1 id="page-title">Стрижка за<br><em>пару сообщений.</em></h1>
+      <p class="lead">Выбери услугу и удобное время. После подтверждения сможешь перенести или отменить запись прямо в чате.</p>
+      <a class="start" href="#chat">Попробовать демо <span aria-hidden="true">↓</span></a>
+      <p class="demo-note">Демо работает в браузере. Настоящая запись не создаётся.</p>
+    </section>
+    <section class="phone" id="chat" aria-labelledby="chat-title">
+      <header class="chat-top">
+        <span class="avatar" aria-hidden="true">F<span>.</span></span>
+        <div>
+          <h2 id="chat-title">FORM · Запись</h2>
+          <p>Демо Telegram-бота</p>
+        </div>
+        <button class="reset" type="button" data-reset hidden>Сначала</button>
+      </header>
+      <div class="history" data-history role="log" aria-live="polite" aria-label="Переписка">
+        <p class="day-marker">Сегодня</p>
+        <div class="message bot">
+          <strong>Привет! Это FORM.</strong>
+          <p>Помогу выбрать стрижку и записаться на удобное время. С чего начнём?</p>
+        </div>
+      </div>
+      <div class="keyboard" data-controls>
+        <p class="step" data-step>Услуга</p>
+        <div class="options" data-options aria-label="Варианты ответа"></div>
+        <noscript><p>Включите JavaScript, чтобы попробовать чат.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <footer class="footer shell">
+    <p>Два человека · сайты и Telegram-боты</p>
+    <a href="../../?v=bot1#contact">Обсудить похожего бота <span aria-hidden="true">→</span></a>
+  </footer>
+</body>
+</html>
