@@ -1,0 +1,40 @@
+/* A small, animated universe for the two-person studio. */
+.hero{overflow:clip}
+.hero-layout{min-height:650px}
+.orbit-scene{--move-x:0px;--move-y:0px;max-width:610px;height:min(45vw,560px);min-height:420px;display:grid;place-items:center;perspective:900px}
+.orbit-glow{position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#c1ef4833 0%,#a8d53a12 44%,transparent 70%);filter:blur(8px);animation:glow-pulse 5s ease-in-out infinite}
+.orbit-ring{position:absolute;width:76%;aspect-ratio:1;border:1px solid #eaf0d337;border-radius:50%;transform:rotateX(66deg) rotateZ(-24deg);box-shadow:0 0 45px #c7fb4d1c,inset 0 0 35px #c7fb4d14}
+.ring-one{animation:ring-one 20s linear infinite}
+.ring-two{width:65%;border-color:#cbf04b45;transform:rotateX(67deg) rotateZ(50deg);animation:ring-two 24s linear infinite}
+.scene-center{width:42%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 32% 25%,#e3ff9b,#c1e84a 47%,#718e31 100%);box-shadow:inset -20px -25px 55px #25351666,0 32px 70px #0006;display:grid;place-items:center;position:relative;color:#202719;transform:translate(var(--move-x),var(--move-y));transition:transform .5s ease}
+.scene-center span{font-size:clamp(16px,2.5vw,37px);font-weight:800;letter-spacing:-.07em;line-height:.9;text-align:center;transform:rotate(-9deg)}
+.scene-center i{position:absolute;bottom:17%;right:19%;font-style:normal;font-size:27px}
+.orbit-face{position:absolute;width:20%;aspect-ratio:.82;border-radius:49%;display:flex;justify-content:center;align-items:center;gap:15%;transform:rotate(var(--tilt));box-shadow:0 20px 45px #0005;animation:face-float 5s ease-in-out infinite}
+.orbit-face i{background:currentColor;width:5%;height:10%;border-radius:50%;margin-top:-12%}
+.orbit-face b{position:absolute;width:25%;height:12%;border:2px solid currentColor;border-top:0;border-radius:0 0 30px 30px;top:57%}
+.orbit-face-one{--tilt:-18deg;left:10%;top:19%;background:#f0f1d9;color:#29331e}
+.orbit-face-two{--tilt:16deg;right:8%;bottom:18%;background:#303d28;color:#d5ff61;animation-delay:-2.2s}
+.scene-caption{position:absolute;bottom:1%;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:9px;letter-spacing:.14em;color:#b9c5ac}
+.scene-caption span{color:#c8ed52;padding:0 9px;font-size:16px}
+.hero-copy h1{font-size:clamp(63px,7.7vw,120px)}
+.hero-primary,.contact-buttons a,.project-open{transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s,box-shadow .3s}
+.hero-primary:hover,.contact-buttons a:hover{box-shadow:0 9px 25px #0003}
+.project-preview{transform:translateZ(0);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+@media(hover:hover){.project-preview:hover{transform:translateY(-7px);box-shadow:0 18px 38px #22251f30}}
+.filters button{transition:background .25s,color .25s,transform .3s cubic-bezier(.2,1.4,.4,1)}
+.filters button:active{transform:scale(.94)}
+.project.filter-enter{animation:project-appear .42s cubic-bezier(.2,.7,.2,1) both}
+@keyframes project-appear{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes face-float{0%,100%{translate:0 0}50%{translate:0 -15px}}
+@keyframes glow-pulse{50%{opacity:.7;transform:scale(1.08)}}
+@keyframes ring-one{from{transform:rotateX(66deg) rotateZ(-24deg)}to{transform:rotateX(66deg) rotateZ(336deg)}}
+@keyframes ring-two{from{transform:rotateX(67deg) rotateZ(50deg)}to{transform:rotateX(67deg) rotateZ(-310deg)}}
+@media(max-width:760px){
+ .hero-layout{min-height:0;gap:15px}
+ .hero{min-height:0}
+ .orbit-scene{height:clamp(290px,88vw,410px);min-height:0}
+ .orbit-face{width:21%}
+ .scene-center span{font-size:clamp(18px,6vw,25px)}
+ .scene-caption{font-size:7px}
+}
+@media(prefers-reduced-motion:reduce){.orbit-scene *,.project.filter-enter{animation:none!important;transition:none!important}.scene-center{transform:none}}
