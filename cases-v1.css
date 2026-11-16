@@ -1,0 +1,16 @@
+/* Project descriptions stay accessible on touch and keyboard. */
+.project-meta{border-bottom:0}
+.case-details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:14px}
+.case-details summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:48px;font-size:12px;font-weight:700}
+.case-details summary::-webkit-details-marker{display:none}
+.case-details summary>span{font-size:23px;font-weight:400;transition:transform .3s ease}
+.case-details[open] summary>span{transform:rotate(45deg)}
+.case-details summary:hover{color:#647517}
+.case-details summary:focus-visible{outline:3px solid #7279b5;outline-offset:4px}
+.case-body{padding:0 0 16px;max-width:48ch;animation:case-in .3s ease both}
+.case-body p{font-size:12px;line-height:1.7;color:#596252}
+.case-body>span{display:block;margin-top:11px;font-size:10px;font-weight:700;color:#596252;letter-spacing:.04em}
+.contact-buttons a:focus-visible{outline-color:#252a21}
+@keyframes case-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media(max-width:760px){.case-details summary{min-height:46px}.case-body p{font-size:12px}.project-meta p{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.case-body{animation:none}.case-details summary>span{transition:none}}
