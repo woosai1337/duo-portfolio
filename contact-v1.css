@@ -1,0 +1,26 @@
+/* A more personal, legible way to start a conversation. */
+.contact-bottom{align-items:stretch;gap:clamp(28px,5vw,90px);margin-top:60px}
+.contact-brief{flex:1;max-width:510px}
+.contact-brief>p{font-size:16px;line-height:1.7;max-width:39ch}
+.contact-brief legend{font-size:14px;margin-bottom:12px}
+.brief-options span{font-size:13px;padding:11px 15px}
+.contact-hint{margin-top:32px;border-top:1px solid #1b201949;padding-top:21px;max-width:43ch}
+.contact-hint strong{font-family:Unbounded,Manrope,sans-serif;font-size:14px;line-height:1.5}
+.contact-hint p{font-size:14px;line-height:1.7;margin-top:9px}
+.contact-people{flex:1;max-width:630px}
+.contact-people-label{font-size:11px!important;font-weight:800;letter-spacing:.1em;margin-bottom:15px;max-width:none!important}
+.contact-people-label span{float:right;font-size:20px;line-height:1}
+.contact-buttons{display:grid;grid-template-columns:1fr;gap:10px}
+.contact-buttons a{min-width:0;min-height:110px;padding:17px 22px;gap:20px;justify-content:flex-start}
+.contact-buttons .contact-avatar{position:relative;flex:0 0 69px;width:69px;height:76px;border-radius:48%;display:flex;align-items:center;justify-content:center;gap:13px;transform:rotate(-9deg);transition:transform .35s}
+.contact-buttons a:hover .contact-avatar{transform:rotate(5deg)}
+.contact-buttons .avatar-light{background:#f3f2dc;color:#1a2117}
+.contact-buttons .avatar-green{background:#d7ff48;color:#1a2117;transform:rotate(9deg)}
+.contact-avatar i{display:block;width:5px;height:10px;border-radius:50%;background:currentColor;margin-top:-10px}
+.contact-avatar b{position:absolute;top:53%;width:22px;height:12px;border:2px solid currentColor;border-top:0;border-radius:0 0 20px 20px}
+.contact-buttons .contact-person{display:flex;flex-direction:column;align-items:flex-start;gap:5px;color:#fff;min-width:0}
+.contact-person small{font-size:10px;letter-spacing:.08em;color:#c4cbbd}
+.contact-person strong{font-size:clamp(18px,2vw,25px);line-height:1.15;overflow-wrap:anywhere}
+.contact-buttons .contact-arrow{margin-left:auto;align-self:center;color:var(--accent);font-size:30px}
+@media(max-width:650px){.contact-bottom{margin-top:38px}.contact-brief>p{font-size:15px}.contact-hint{margin-top:24px}.contact-people{margin-top:32px}.contact-buttons{margin-top:0}.contact-buttons a{min-height:100px;padding:14px;gap:14px}.contact-buttons .contact-avatar{width:60px;height:66px;flex-basis:60px}.contact-person strong{font-size:clamp(17px,5vw,23px)}.contact-person small{font-size:9px}.contact-buttons .contact-arrow{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.contact-buttons .contact-avatar{transition:none}}
