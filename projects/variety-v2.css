@@ -1,0 +1,151 @@
+/* FORM: raw monochrome editorial, oversized craft typography. */
+.form{--base:#111;--ink:#f1efe8;--muted:#b9b8ad;--rule:#ffffff38;--accent:#f3613d;--on-accent:#17110e;--focus:#f3613d}
+.form .site-header{border:0;min-height:82px}
+.form .logo span,.form .kicker{color:var(--accent)}
+.form .header-action{background:var(--accent);border-color:var(--accent)}
+.form .site-nav a[aria-current]::after{background:var(--accent)}
+.form .stage.home{width:100%;padding-top:0}
+.form-poster{min-height:clamp(540px,73svh,830px);background:#161614;color:#f5f1e7}
+.form-poster:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#111 0%,#111c9 35%,#1113 80%),linear-gradient(0deg,#1118,transparent 50%),url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1800&q=85') center/cover;filter:grayscale(1)}
+.form-poster:after{content:none}
+.form-poster-copy{padding:clamp(32px,6vw,100px);max-width:1300px;margin:auto;width:100%}
+.form-poster-copy .kicker{color:#ff845f;border-color:#f3613d}
+.form-poster h1{font-size:clamp(70px,10vw,165px);line-height:.97;letter-spacing:-.025em;max-width:75%;margin:25px 0}
+.form-poster h1 em{color:transparent;-webkit-text-stroke:1.5px #f3613d}
+.form-poster-copy>p:not(.kicker){color:#e8e4dc}
+.form-index-link{background:var(--accent);color:#141414;font-weight:800}
+.form-index-link:hover{background:#ff9b7d}
+.form-poster .object-window{inset:auto 2% 0 auto;width:28%;height:55%;opacity:.82}
+.form-poster .object-window figcaption{color:white}
+.form-poster .orbit-button{background:#141414;color:#fff;border-color:#f3613d}
+.form-quick{width:min(100% - 12%,1350px);margin:80px auto 0;grid-template-columns:.8fr 1.2fr}
+.form-quick img{filter:grayscale(1);transition:filter .7s}
+.form-quick img:hover{filter:grayscale(.15)}
+.form-price h2{color:#f3613d}
+.form .price-board a:hover,.form .price-board i{color:#f3613d}
+.form-manifest{width:min(100% - 12%,1350px);margin:80px auto 40px;border-top:1px solid var(--rule);padding-top:35px;display:grid;grid-template-columns:1.25fr .75fr;gap:20px 12%}
+.form-manifest h2{font:700 clamp(42px,6vw,88px)/1 Oswald,sans-serif;text-transform:uppercase;margin-top:16px}
+.form-manifest h2 em{color:#f3613d;font-style:normal}
+.form-manifest p:not(.label){color:var(--muted);max-width:43ch;align-self:end}
+.form-manifest>a{grid-column:2;font-weight:700;font-size:12px;border-bottom:1px solid var(--rule);padding-bottom:10px;justify-self:start}
+
+/* MUSE: a high-contrast fashion editorial. */
+.muse{--base:#f5eadf;--ink:#342022;--muted:#725f5b;--rule:#c8b6aa;--accent:#8d243e;--on-accent:#fff8f2;--focus:#8d243e}
+.muse .site-header{border-bottom:1px solid #b9a59e}
+.muse .stage.home{width:min(100% - 84px,1500px)}
+.muse-cover{grid-template-columns:.7fr 1.2fr .5fr;min-height:clamp(560px,76svh,820px);gap:0}
+.muse-cover:before{content:'MUSE';position:absolute;z-index:-2;right:0;top:-2%;font:400 clamp(130px,22vw,340px)/1 Georgia,serif;letter-spacing:-.12em;color:#e4cfc3}
+.muse-cover h1{font-size:clamp(65px,7.3vw,116px);line-height:1.02;letter-spacing:-.055em;max-width:8.8ch}
+.muse-cover h1 em{color:#a63c50}
+.muse-cover-photo{border-radius:0;margin:7% 4% 0;filter:saturate(.75)}
+.muse-cover-copy{border-left:1px solid var(--rule);padding-left:25px}
+.muse-down{letter-spacing:.07em}
+.muse-counter{background:#ead4ca;padding:clamp(24px,5vw,70px);border-radius:0 100px 0 0}
+.muse-counter .object-window{border-radius:50%;background:radial-gradient(circle,#faf0e7,#dbb5a9);min-height:clamp(300px,34vw,440px)}
+.muse-counter h2{font-family:Georgia,serif;font-style:italic;font-size:clamp(44px,6vw,90px);letter-spacing:-.045em}
+.muse-editorial{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center;padding:95px 0 60px}
+.muse-editorial-photo{height:clamp(340px,45vw,560px);overflow:hidden}
+.muse-editorial-photo img{transition:transform 1s}.muse-editorial-photo:hover img{transform:scale(1.04)}
+.muse-editorial h2{font:400 clamp(45px,5.5vw,80px)/1.1 Georgia,serif;letter-spacing:-.04em;margin:22px 0}
+.muse-editorial h2 em{color:#a63c50}
+.muse-editorial p:not(.label){color:var(--muted);max-width:38ch;line-height:1.8}
+.muse-editorial a{display:inline-block;border-bottom:1px solid;margin-top:25px;padding-bottom:8px;font-weight:700;font-size:12px}
+
+/* ELSEWHERE: immersive expedition journal with a full-bleed landscape. */
+.travel{--base:#102b31;--ink:#f4f1df;--muted:#c0d2cf;--rule:#ffffff40;--accent:#f3a96b;--on-accent:#182b29;--focus:#f3a96b;color-scheme:dark}
+.travel .site-header{border-bottom:1px solid #ffffff38}
+.travel .logo span{color:#f3a96b}
+.travel .header-action{background:#f3a96b;color:#102b31;border-color:#f3a96b}
+.travel .stage.home{width:100%;padding-top:0}
+.atlas{position:relative;display:flex;flex-direction:column;isolation:isolate;min-height:clamp(600px,82svh,900px);padding:clamp(30px,5vw,75px) 6%;justify-content:end;gap:25px;overflow:hidden}
+.travel .atlas-photo{position:absolute;inset:0;z-index:-1;min-height:100%;background:#25444b;display:block}
+.atlas-photo img{position:absolute;inset:0}
+.atlas-photo:before{background:linear-gradient(90deg,#071e22dc,transparent 80%),linear-gradient(0deg,#071e22f2,transparent 80%)}
+.atlas-title{display:block;max-width:700px}
+.atlas-title h1{font-size:clamp(68px,11vw,150px);line-height:.95;color:#fff}
+.atlas-title p{margin-top:15px;color:#e0ede6}
+.atlas-photo figcaption{position:absolute;inset:auto 6% 12% auto;padding:0;text-align:right}
+.atlas-photo h2{font-size:clamp(30px,4vw,58px)}
+.atlas-picks{display:flex;gap:7px;max-width:650px}
+.atlas-picks button{flex:1;border:1px solid #ffffff80;color:#fff;background:#0d272c7d}
+.atlas-picks button[aria-pressed=true]{background:#f3a96b;color:#102b31;border-color:#f3a96b}
+.travel .field-note{width:min(100% - 12%,1400px);margin:70px auto;border-color:#ffffff45;background:#15383d}
+.travel .field-note a{border-color:#f3a96b}
+.travel .field-note .object-window{background:radial-gradient(ellipse,#6b9688,#1a4547);border-color:#ffffff45}
+.travel .choices button[aria-pressed=true]{color:#f3a96b;border-color:#f3a96b;box-shadow:0 1px #f3a96b}
+.travel .detail{background:#1b3c40;border-color:#ffffff40}
+.travel .detail-copy ol{border-color:#f3a96b}
+.travel .detail-copy li:before{background:#f3a96b}
+.travel-story{position:relative;min-height:570px;display:flex;align-items:center;isolation:isolate;padding:70px 8%;overflow:hidden}
+.travel-story-photo,.travel-story-photo:after{position:absolute;inset:0;z-index:-1}
+.travel-story-photo:after{content:'';background:linear-gradient(90deg,#082328ed,transparent)}
+.travel-story h2{font:600 clamp(55px,7vw,100px)/.98 Oswald,sans-serif;letter-spacing:-.025em;margin:20px 0}
+.travel-story h2 em{font:italic .7em Georgia,serif;color:#f3a96b}
+.travel-story p:not(.label){max-width:38ch;color:#e0ede6}
+.travel-story a{display:inline-block;border-bottom:1px solid #f3a96b;padding-bottom:8px;margin-top:25px;font-weight:700;font-size:12px}
+
+/* ATELIER: warm print, generous whitespace, quiet luxury. */
+.atelier{--base:#f4eddf;--ink:#30251f;--muted:#75675b;--rule:#c3b4a3;--accent:#57432e;--on-accent:#fff9ee;--focus:#57432e}
+.atelier .site-header{border-bottom:1px solid #c3b4a3}
+.atelier .stage.home{width:100%;padding-top:0}
+.dinner{min-height:clamp(610px,82svh,860px)}
+.dinner-photo img{filter:brightness(.68) saturate(.7)}
+.dinner-photo:after{background:#1a110c38}
+.dinner-card{width:min(calc(100% - 45px),560px);background:#f5eddf;outline:1px solid #b5a089;outline-offset:-13px;padding:clamp(45px,6vw,88px) 35px}
+.dinner-card h1{font:500 clamp(70px,7.5vw,110px)/.88 'Cormorant Garamond',Georgia,serif;margin:23px 0}
+.dinner-card em{color:#8b604a}
+.dinner-card .button{background:#34291f;border-color:#34291f}
+.dinner-menu{width:min(100% - 12%,1350px);margin:80px auto;gap:8%;border-color:#b8a795}
+.dinner-special h2{font:500 clamp(55px,6vw,90px)/1 'Cormorant Garamond',Georgia,serif}
+.dinner-dishes h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(25px,2.8vw,38px)}
+.dinner-dishes article{padding:15px 0}
+.dinner-room{min-height:440px}
+.atelier-evening{background:#e4dbc9;text-align:center;padding:90px 20px}
+.atelier-evening h2{font:500 clamp(54px,6vw,90px)/1 'Cormorant Garamond',Georgia,serif;margin:22px 0}
+.atelier-evening h2 em{color:#8b604a}
+.atelier-evening p:not(.label){max-width:43ch;margin:auto;color:var(--muted)}
+.atelier-evening a{display:inline-block;border-bottom:1px solid;padding-bottom:9px;margin-top:25px;font-weight:700;font-size:12px}
+.label{font:700 10px/1.5 Manrope,sans-serif;letter-spacing:.16em}
+
+@media(max-width:660px){
+ .form-poster{min-height:0;display:block}
+ .form-poster:before{background:linear-gradient(90deg,#111e8,#11180),url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80') center/cover}
+ .form-poster-copy{padding:50px 20px 0}
+ .form-poster h1{font-size:clamp(48px,12vw,72px);max-width:100%;margin:18px 0}
+ .form-poster .object-window{position:relative;inset:auto;width:100%;height:230px;min-height:230px}
+ .form-quick,.form-manifest{width:calc(100% - 36px);margin-top:45px}
+ .form-manifest{grid-template-columns:1fr;gap:20px;margin-bottom:35px}
+ .form-manifest>a{grid-column:1}
+ .muse .stage.home{width:calc(100% - 36px)}
+ .muse-cover{min-height:0;grid-template-columns:.35fr 1fr}
+ .muse-cover:before{top:8%;font-size:35vw}
+ .muse-cover h1{font-size:clamp(44px,12vw,70px);max-width:8ch}
+ .muse-cover-photo{margin:75px 0 0;aspect-ratio:.87}
+ .muse-cover-copy{padding:0;border:0}
+ .muse-counter{border-radius:0 50px 0 0;padding:20px}
+ .muse-counter h2{font-size:40px}
+ .muse-counter .object-window{min-height:265px}
+ .muse-editorial{grid-template-columns:1fr;gap:25px;padding:55px 0 35px}
+ .muse-editorial-photo{height:310px}
+ .muse-editorial h2{font-size:48px;margin:14px 0}
+ .travel .atlas{min-height:620px;padding:35px 18px;gap:17px}
+ .atlas-title h1{font-size:clamp(54px,14vw,75px)}
+ .travel .atlas-photo{position:absolute;inset:0;min-height:100%}
+ .atlas-photo figcaption{inset:auto 18px 35px;text-align:left}
+ .atlas-photo h2{font-size:38px}
+ .atlas-picks{order:0;display:grid;grid-template-columns:repeat(3,1fr);width:100%;margin-bottom:170px}
+ .travel .field-note{width:calc(100% - 36px);margin:35px auto}
+ .travel-story{min-height:440px;padding:50px 25px}
+ .travel-story h2{font-size:60px}
+ .dinner{min-height:570px}
+ .dinner-card{width:calc(100% - 45px);padding:50px 25px}
+ .dinner-card h1{font-size:68px}
+ .dinner-menu{width:calc(100% - 36px);margin:45px auto}
+ .dinner-room{min-height:260px}
+ .atelier-evening{padding:65px 20px}
+ .atelier-evening h2{font-size:50px}
+}
+@media(prefers-reduced-motion:reduce){.muse-editorial-photo img{transition:none}}
+
+.dinner-photo{overflow:hidden}
+@media(max-width:660px){.form .form-quick{grid-template-columns:1fr}.form .form-quick figure{height:190px}.form .form-price{padding:25px 0}}
